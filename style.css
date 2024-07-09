@@ -1,14 +1,27 @@
 * {
     box-sizing: border-box;
-    border: 1px solid black;
     margin: 0;
+    
+    
+}
+
+svg {
+    height: 2rem;
+}
+
+.white-icon {
+    filter: invert(99%) sepia(1%) saturate(138%) hue-rotate(336deg) brightness(117%) contrast(100%);
+    
 }
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4.5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6.5fr;
     height: 100vh;
+    min-width: 1200px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 24%);
 }
 
 .sidemenu {
@@ -16,24 +29,94 @@ body {
     grid-column: 1 / 2;
     display: grid;
     grid-template-rows: 1.5fr 1fr 6fr 1fr 3fr 6fr;
+    padding: 4px;
+    padding-left:8px;
+
+    background-color: hsl(218, 100%, 68%);
+    color: white;
 }
 
 .navbar {
     grid-row: 1 / 2;
     grid-column: 2 / -1;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.1fr;
 }
 
 .searchbar-container {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 5fr 2fr;
+    padding-left: 20px;
+    
+    
+}
+
+.searchbar {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.searchbar input {
+    width: 95%;
+}
+
+.profile-buttons {
+    display: grid;
+    grid-template-columns: 20% 20% 40%;
+    align-items: center;
+    justify-content: right;
+    gap: 15px;
+    padding-left: 20px;
 }
 
 .header {
     grid-row: 2;
     display: grid;
     grid-template-columns: 2.8fr 2fr;
+    padding-left: 20px;
+    box-shadow: 0px 3px 2px 0px #9b9b9b;
+    position: relative;
+
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.welcome svg {
+    height: 2.5rem;
+    
+}
+
+.welcome span {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.header-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 10px 30px 10px;
+    gap: 5px;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+.header-buttons button {
+    background-color: hsl(218, 100%, 68%);
+    color: white;
+    grid-row: 2;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+
 }
 
 .content {
@@ -41,19 +124,35 @@ body {
     grid-column: 2 / -1;
     display: grid;
     grid-template-columns: 2.2fr 1fr;
-    grid-template-rows: 1fr 20fr;
+    background-color: hsl(219, 45%, 90%);
+
+}
+
+.project, .announcements, .trending {
+    border-radius: 5px;
+    box-shadow: 2px 3px 2px #6a6a6a;
 }
 
 .projects {
-    grid-row: 2;
+    grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: repeat(3, 1fr);
-    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr repeat(3, 6fr);
+    gap: 20px;
+    padding: 30px 20px 20px 20px;
+}
+
+.projects h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
 }
 
 .notifications {
-    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 8.5fr 1fr 8.5fr;
+    gap: 20px;
+    margin: 30px 20px 20px 20px;
 }
 
 .navigation-buttons {
@@ -62,9 +161,35 @@ body {
     grid-template-rows: repeat(6, 1fr);
 }
 
+.navigation-buttons div, .setting-buttons div {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    
+}
+
 .setting-buttons {
     grid-row: 5 / 6;
     display: grid;
     grid-template-rows: repeat(3 , 1fr);
 }
 
+.sidemenu button {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    background-color: hsl(218, 100%, 68%);
+    color: white;
+
+    border: none;
+}
+
+.brand {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+}
